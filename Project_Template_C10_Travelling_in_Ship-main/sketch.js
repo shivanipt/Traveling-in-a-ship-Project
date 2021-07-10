@@ -9,9 +9,10 @@ function preload(){
 function setup(){
   createCanvas(400,400);
 
-  sea = createSprite(10, 10);
+  sea = createSprite(200, 100, 200, 200);
   sea.addImage("sea", seaImage);
-  sea.x = sea.width/2;
+  sea.scale = 0.7;
+  sea.velocityX = 2;
 
   ship = createSprite(125, 200, 20, 50);
   ship.addAnimation("swimming", ship_swimming);
@@ -22,7 +23,7 @@ function setup(){
 
 function draw() {
   background("blue");
-
+  
   if(sea.x < 0) {
     sea.x = sea.width/2;
   }
