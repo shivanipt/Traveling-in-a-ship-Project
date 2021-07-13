@@ -11,8 +11,8 @@ function setup(){
 
   sea = createSprite(200, 100, 200, 200);
   sea.addImage("sea", seaImage);
-  sea.scale = 0.7;
-  sea.velocityX = 2;
+  sea.scale = 0.3;
+  sea.velocityX = -5;
 
   ship = createSprite(125, 200, 20, 50);
   ship.addAnimation("swimming", ship_swimming);
@@ -23,7 +23,8 @@ function setup(){
 
 function draw() {
   background("blue");
-  
+  sea.velocityX = -3;
+
   if(sea.x < 0) {
     sea.x = sea.width/2;
   }
